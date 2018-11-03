@@ -1,39 +1,63 @@
 # redis-admin
 
 #### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+一个简单好用的redis缓存图形化管理工具，包含redis的5种数据类型的CRUD操作; 由于该系统是在大名鼎鼎的JeeSite基础之上开发的，所有保留了原系统的用户/角色/权限/菜单等模块.
 
 #### 软件架构
-软件架构说明
+1. SpringBoot
+2. SpringMVC
+3. Mybatis
+4. JSP
+5. Freemarker
+6. JQuery
+7. Ehcache
+8. MySQL
+9. Redis
 
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. 创建名为x-redis-admin数据库
+2. 在创建好的数据库中执行 sql/db.sql 脚本文件来初始化基础数据
+3. 修改application-dev.yml中的数据库名称、用户名和密码
+4. 运行App.java中的main方法启动系统
+5. 默认浏览器访问地址 http://localhost:18080
+6. 默认系统登陆账号 admin 密码 admin
 
-#### 使用说明
+#### 有图有真相
+![](screenshot/1-1541241037174.png)
 
-1. xxxx
-2. xxxx
-3. xxxx
+![](screenshot/2-1541241084179.png)
+
+![](screenshot/3-1541241493839.png)
+
+![](screenshot/4-1541241149816.png)
+
+![](screenshot/4-1541241225580.png)
+
+![](screenshot/5-1541241277696.png)
+
+![](screenshot/6-1541241312722.png)
+
+![](screenshot/7-1541241360744.png)
+
+![](screenshot/8-1541241385881.png)
+
+![](screenshot/9-1541241421674.png)
+
+![](screenshot/10-1541241456056.png)
+
+
+#### 项目计划
+
+1. 实现redis主机和端口的图形化配置功能
+2. 实现集合中元素的修改操作
+3. 实现Reids集群配置管理功能
+4. 实现Redis集群监控
 
 #### 参与贡献
 
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+欢迎优秀的开发人员参与该项目, 贡献自己的代码, 一起做一个最好的Redis客户端工具!
+联系QQ 490983587
 
 
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
