@@ -26,7 +26,7 @@
 #### 有图有真相
 ![](screenshot/1-1541241037174.png)
 
-![](screenshot/2-1541241084179.png)
+![](screenshot/2-1541559258468.png)
 
 ![](screenshot/3-1541241493839.png)
 
