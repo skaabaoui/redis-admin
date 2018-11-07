@@ -3,16 +3,15 @@
 #### 项目介绍
 一个简单好用的redis缓存图形化管理工具，包含redis的5种数据类型的CRUD操作; 由于该系统是在大名鼎鼎的JeeSite基础之上开发的，所有保留了原系统的用户/角色/权限/菜单等模块.
 
-#### 软件架构
+#### 软件涉及技术
 1. SpringBoot
 2. SpringMVC
 3. Mybatis
 4. JSP
-5. Freemarker
-6. JQuery
-7. Ehcache
-8. MySQL
-9. Redis
+5. JQuery
+6. Ehcache
+7. MySQL
+8. Redis
 
 
 #### 安装教程
