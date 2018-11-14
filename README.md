@@ -23,6 +23,11 @@
 5. 默认浏览器访问地址 http://localhost:18080
 6. 默认系统登陆账号 admin 密码 admin
 
+#### 打包运行
+1. 打包:执行命令 mvn clean package 对项目进行打包，打好的war包生成在项目的target目录下.
+
+2. 生产中运行:打好war包之后，在linux下请执行该命令来启动项目: java -jar redis-admin-1.0.0-SNAPSHOT.war
+
 #### 有图有真相
 ![](screenshot/1-1541241037174.png)
 
