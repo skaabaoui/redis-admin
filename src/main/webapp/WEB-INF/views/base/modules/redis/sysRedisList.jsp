@@ -46,6 +46,18 @@
     <input id="pageNo" name="pageNo" type="hidden" value="${page.pageNo}"/>
     <input id="pageSize" name="pageSize" type="hidden" value="${page.pageSize}"/>
     <ul class="ul-form">
+        <%--<li><label>集群节点：</label>
+            <form:select path="redisNodeName" class="input-medium">
+                <form:option value="" label="请选择"/>
+                <form:options items="${nodeList}" itemLabel="redisNodeName" itemValue="redisNodeName" htmlEscape="false"/>
+            </form:select>
+        </li>
+        <li><label>数据库索引：</label>
+            <form:select path="redisDbIndex" class="input-medium">
+                <form:option value="" label="请选择"/>
+                <form:options items="${dbList}" itemLabel="redisDbIndex" itemValue="redisDbIndex" htmlEscape="false"/>
+            </form:select>
+        </li>--%>
         <li><label>缓存键：</label>
             <form:input path="redisKey" htmlEscape="false" maxlength="200" class="input-medium"/>
         </li>
