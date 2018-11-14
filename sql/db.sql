@@ -268,6 +268,28 @@ create table sys_user_role
 comment '用户-角色' collate=utf8_bin
 ;
 
+create table if not exists redis_cluster
+(
+	id bigint auto_increment comment '编号'
+		primary key,
+	redis_host_name varchar(100) not null comment 'redis主机名',
+	redis_port int(20) null comment 'redis端口',
+	create_by varchar(64) not null comment '创建者',
+	create_date datetime not null comment '创建时间',
+	update_by varchar(64) not null comment '更新者',
+	update_date datetime not null comment '更新时间',
+	remarks varchar(255) null comment '备注信息',
+	del_flag char default '0' not null comment '删除标记'
+)
+comment 'redis集群信息' collate=utf8_bin
+;
+
+INSERT INTO `x-redis-admin`.redis_cluster (id, redis_host_name, redis_port, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (1, '127.0.0.1', 7000, '1', '2018-11-14 20:23:58', '1', '2018-11-14 20:23:58', '', '0');
+INSERT INTO `x-redis-admin`.redis_cluster (id, redis_host_name, redis_port, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (2, '127.0.0.1', 7001, '1', '2018-11-14 20:23:59', '1', '2018-11-14 20:24:09', '', '0');
+INSERT INTO `x-redis-admin`.redis_cluster (id, redis_host_name, redis_port, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (3, '127.0.0.1', 7002, '1', '2018-11-14 20:24:16', '1', '2018-11-14 20:24:16', '', '0');
+INSERT INTO `x-redis-admin`.redis_cluster (id, redis_host_name, redis_port, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (4, '127.0.0.1', 7003, '1', '2018-11-14 20:24:22', '1', '2018-11-14 20:24:22', '', '0');
+INSERT INTO `x-redis-admin`.redis_cluster (id, redis_host_name, redis_port, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (5, '127.0.0.1', 7004, '1', '2018-11-14 20:24:28', '1', '2018-11-14 20:24:28', '', '0');
+INSERT INTO `x-redis-admin`.redis_cluster (id, redis_host_name, redis_port, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (6, '127.0.0.1', 7005, '1', '2018-11-14 20:24:33', '1', '2018-11-14 20:24:33', '', '0');
 
 INSERT INTO `x-redis-admin`.sys_area (id, parent_id, parent_ids, name, sort, code, type, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (1, 0, '0,', '中国', 10, '100000', '1', '1', '2013-05-27 08:00:00', '1', '2013-05-27 08:00:00', null, '0');
 INSERT INTO `x-redis-admin`.sys_area (id, parent_id, parent_ids, name, sort, code, type, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (2, 1, '0,1,', '北京', 20, '110000', '2', '1', '2013-05-27 08:00:00', '1', '2018-10-11 14:23:48', '', '0');
