@@ -168,11 +168,4 @@ public class CryptUtils {
 
         return null;
     }
-
-    public static void main(String[] args) {
-        String s = "";
-        for (String ss : s.split(",")) {
-            System.out.println(decrypt(ss));
-        }
-    }
 }
