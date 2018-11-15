@@ -26,17 +26,6 @@ create index sys_area_parent_id
 	on sys_area (parent_id)
 ;
 
-create table sys_column_hide
-(
-	id bigint auto_increment comment 'ID'
-		primary key,
-	column_hide_arr varchar(100) null comment '页面上要隐藏的列索引,使用逗号分隔',
-	page_name varchar(50) null comment '页面名称',
-	class_name varchar(50) null comment '所属类名,唯一标识'
-)
-comment '列隐藏' collate=utf8mb4_bin
-;
-
 create table sys_dict
 (
 	id bigint null,
@@ -45,7 +34,8 @@ create table sys_dict
 	type tinytext null,
 	description tinytext null,
 	sort decimal null,
-	parent_id bigint null,
+	parent_id bigint nulls
+	,
 	create_by tinytext null,
 	create_date timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP,
 	update_by tinytext null,
@@ -426,16 +416,12 @@ INSERT INTO `x-redis-admin`.sys_role_menu (role_id, menu_id) VALUES (1, 151);
 INSERT INTO `x-redis-admin`.sys_role_menu (role_id, menu_id) VALUES (1, 160);
 INSERT INTO `x-redis-admin`.sys_role_menu (role_id, menu_id) VALUES (1, 161);
 INSERT INTO `x-redis-admin`.sys_role_menu (role_id, menu_id) VALUES (1, 162);
-INSERT INTO `x-redis-admin`.sys_role_menu (role_id, menu_id) VALUES (8, 1);
 
 INSERT INTO `x-redis-admin`.sys_role_office (role_id, office_id) VALUES (1, 1);
 
 INSERT INTO `x-redis-admin`.sys_role (id, office_id, name, enname, role_type, data_scope, is_sys, useable, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (1, 2, '系统管理员', 'dept', 'assignment', '1', '1', '1', '1', '2013-05-27 08:00:00', '1', '2018-11-14 20:22:39', '', '0');
-INSERT INTO `x-redis-admin`.sys_role (id, office_id, name, enname, role_type, data_scope, is_sys, useable, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (8, 2, '普通用户', 'ordinaryuser', 'user', '8', '1', '1', '1', '2018-10-17 10:14:40', '1', '2018-10-17 10:14:40', '', '1');
 
 INSERT INTO `x-redis-admin`.sys_user_role (user_id, role_id) VALUES (1, 1);
-INSERT INTO `x-redis-admin`.sys_user_role (user_id, role_id) VALUES (8, 8);
 
 INSERT INTO `x-redis-admin`.sys_user (id, company_id, office_id, login_name, password, no, name, email, phone, mobile, user_type, photo, login_ip, login_date, login_flag, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (1, 1, 2, 'admin', 'a5eaa537ee49eeb81ddeb7b4d327f98fcef83943b0cd442f06b6e3a2', '0001', '系统管理员', 'xbs1019@126.com', '17610639158', '17610639158', '1', '/userfiles/1/images/photo/2018/10/05de1b07.jpeg', '0:0:0:0:0:0:0:1', '2018-11-14 20:48:26', '1', '1', '2013-05-27 08:00:00', '1', '2018-11-14 20:44:32', '最高管理员', '0');
-INSERT INTO `x-redis-admin`.sys_user (id, company_id, office_id, login_name, password, no, name, email, phone, mobile, user_type, photo, login_ip, login_date, login_flag, create_by, create_date, update_by, update_date, remarks, del_flag) VALUES (8, 1, 2, 'user', 'bb4589fdb5f226c0bd35f37b0d69748ff361d6e23c4ef7d53d5abd1c', '10010', 'user', '', '', '', '2', '/userfiles/8/images/photo/2018/10/93a27ccc.jpeg', '0:0:0:0:0:0:0:1', '2018-10-17 10:16:02', '1', '1', '2018-10-17 10:15:47', '1', '2018-10-17 16:34:02', '', '1');
 
