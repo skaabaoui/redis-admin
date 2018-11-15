@@ -29,10 +29,6 @@
 2. 生产中运行:打好war包之后，在linux下请执行该命令来启动项目: java -jar redis-admin-1.0.0-SNAPSHOT.war
 
 #### 有图有真相
-![](screenshot/11-1542275834144.png)
-
-![](screenshot/12-1542275862427.png)
-
 ![](screenshot/1-1541241037174.png)
 
 ![](screenshot/2-1541559258468.png)
@@ -54,6 +50,10 @@
 ![](screenshot/9-1541241421674.png)
 
 ![](screenshot/10-1541241456056.png)
+
+![](screenshot/11-1542275834144.png)
+
+![](screenshot/12-1542275862427.png)
 
 
 #### 项目计划
