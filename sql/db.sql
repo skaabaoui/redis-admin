@@ -34,7 +34,7 @@ create table sys_dict
 	type tinytext null,
 	description tinytext null,
 	sort decimal null,
-	parent_id bigint nulls
+	parent_id bigint null
 	,
 	create_by tinytext null,
 	create_date timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP,
